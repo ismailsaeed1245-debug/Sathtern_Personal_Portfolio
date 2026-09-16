@@ -1,4 +1,4 @@
-* {
+ * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,44 +12,47 @@ body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     color: #222;
-    background: white;
+    background: #fff;
 }
 
 
 /* Navigation */
 
 header {
-    background: #ffffff;
-    border-bottom: 1px solid #eeeeee;
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e8e8e8;
     position: sticky;
     top: 0;
     z-index: 100;
+    backdrop-filter: blur(8px);
 }
 
 nav {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
-    padding: 18px 20px;
-
+    padding: 18px 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .logo {
-    font-size: 22px;
+    font-size: 23px;
+    font-weight: bold;
     color: #222;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 28px;
 }
 
 .nav-links a {
     text-decoration: none;
-    color: #333;
+    color: #444;
     font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
 }
 
 .nav-links a:hover {
@@ -60,30 +63,32 @@ nav {
 /* Home */
 
 .home {
-    min-height: 500px;
-    background: #f5f7ff;
+    min-height: 560px;
+    background: linear-gradient(135deg, #f5f7ff, #eef1ff);
 
     display: flex;
     align-items: center;
     justify-content: center;
 
     text-align: center;
-    padding: 60px 20px;
+    padding: 70px 20px;
 }
 
 .home-content {
-    max-width: 650px;
+    max-width: 700px;
 }
 
 .home-content p:first-child {
     color: #4a63e7;
     font-size: 18px;
-    margin-bottom: 5px;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
 .home h1 {
-    font-size: 52px;
+    font-size: 55px;
     margin-bottom: 8px;
+    letter-spacing: -1px;
 }
 
 .home h3 {
@@ -93,8 +98,8 @@ nav {
 }
 
 .intro {
-    margin: 20px auto 30px;
-    max-width: 550px;
+    margin: 20px auto 32px;
+    max-width: 570px;
     color: #666;
 }
 
@@ -103,44 +108,66 @@ nav {
     background: #4a63e7;
     color: white;
 
-    padding: 12px 24px;
-    border-radius: 5px;
+    padding: 13px 28px;
+    border-radius: 8px;
 
     text-decoration: none;
+    font-weight: bold;
+
+    box-shadow: 0 6px 18px rgba(74, 99, 231, 0.25);
+    transition: 0.3s;
 }
 
 .button:hover {
     background: #354dcc;
+    transform: translateY(-2px);
+    box-shadow: 0 9px 22px rgba(74, 99, 231, 0.3);
 }
 
 
 /* General Sections */
 
 .section {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
-    padding: 70px 20px;
+    padding: 80px 25px;
 }
 
 .section > h2 {
     text-align: center;
-    font-size: 32px;
-    margin-bottom: 35px;
+    font-size: 34px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section > h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background: #4a63e7;
+    margin: 10px auto 0;
+    border-radius: 10px;
 }
 
 .light {
     max-width: none;
-    background: #f8f8f8;
+    background: #f8f9fc;
 }
 
 
 /* About */
 
 .about-box {
-    max-width: 750px;
+    max-width: 780px;
     margin: auto;
     text-align: center;
     color: #555;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #eee;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.04);
 }
 
 .about-box p {
@@ -151,24 +178,33 @@ nav {
 /* Skills */
 
 .skills {
-    max-width: 1000px;
+    max-width: 1050px;
     margin: auto;
 
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
 
-    padding: 0 20px;
+    padding: 0 25px;
 }
 
 .skill {
     background: white;
-    padding: 25px 18px;
+    padding: 28px 18px;
 
-    border: 1px solid #e5e5e5;
-    border-radius: 7px;
+    border: 1px solid #e7e7e7;
+    border-radius: 12px;
 
     text-align: center;
+
+    transition: 0.3s;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+    border-color: #cfd5ff;
+    box-shadow: 0 10px 25px rgba(74, 99, 231, 0.1);
 }
 
 .skill h3 {
@@ -191,9 +227,18 @@ nav {
 }
 
 .project {
-    border: 1px solid #e2e2e2;
-    border-radius: 7px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
     padding: 30px;
+    background: white;
+
+    transition: 0.3s;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
 }
 
 .project h3 {
@@ -209,6 +254,11 @@ nav {
     text-decoration: none;
     color: #4a63e7;
     font-weight: bold;
+    transition: 0.3s;
+}
+
+.project-link:hover {
+    color: #354dcc;
 }
 
 
@@ -228,13 +278,22 @@ form {
 input,
 textarea {
     width: 100%;
-    padding: 13px;
+    padding: 14px;
 
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #d6d6d6;
+    border-radius: 8px;
 
     font-family: Arial, sans-serif;
     font-size: 15px;
+    outline: none;
+
+    transition: 0.3s;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #4a63e7;
+    box-shadow: 0 0 0 3px rgba(74, 99, 231, 0.1);
 }
 
 textarea {
@@ -243,18 +302,22 @@ textarea {
 
 button {
     border: none;
-    padding: 13px;
+    padding: 14px;
 
     background: #4a63e7;
     color: white;
 
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 15px;
+    font-weight: bold;
     cursor: pointer;
+
+    transition: 0.3s;
 }
 
 button:hover {
     background: #354dcc;
+    transform: translateY(-2px);
 }
 
 
@@ -264,7 +327,7 @@ footer {
     background: #222;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 23px;
 }
 
 
@@ -284,11 +347,11 @@ footer {
     }
 
     .home {
-        min-height: 450px;
+        min-height: 480px;
     }
 
     .home h1 {
-        font-size: 38px;
+        font-size: 40px;
     }
 
     .home h3 {
@@ -304,7 +367,7 @@ footer {
     }
 
     .section {
-        padding: 55px 20px;
+        padding: 60px 20px;
     }
 }
 
@@ -321,6 +384,10 @@ footer {
     }
 
     .home h1 {
-        font-size: 32px;
+        font-size: 33px;
+    }
+
+    .home {
+        padding: 55px 18px;
     }
 }
