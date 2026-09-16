@@ -391,3 +391,6 @@ footer {
         padding: 55px 18px;
     }
 }
+body {
+    background: red !important;
+}
