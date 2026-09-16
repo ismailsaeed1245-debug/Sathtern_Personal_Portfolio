@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <h2 class="logo">My Portfolio</h2>
+
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+
+    <!-- Home -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <p>Hello, I'm</p>
+            <h1>Ismail Saeed</h1>
+            <h3>Web Development Learner</h3>
+
+            <p class="intro">
+                I am learning web development and enjoy creating
+                simple, responsive and useful websites.
+            </p>
+
+            <a href="#projects" class="button">View My Projects</a>
+        </div>
+    </section>
+
+
+    <!-- About -->
+    <section id="about" class="section">
+        <h2>About Me</h2>
+
+        <div class="about-box">
+            <p>
+                I am a student and a beginner web developer interested
+                in learning modern web technologies. I enjoy practicing
+                my skills by building small projects and websites.
+            </p>
+
+            <p>
+                My goal is to improve my development skills and gain
+                practical experience by working on real projects.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- Skills -->
+    <section id="skills" class="section light">
+        <h2>My Skills</h2>
+
+        <div class="skills">
+
+            <div class="skill">
+                <h3>HTML</h3>
+                <p>Creating the structure of web pages.</p>
+            </div>
+
+            <div class="skill">
+                <h3>CSS</h3>
+                <p>Designing clean and responsive websites.</p>
+            </div>
+
+            <div class="skill">
+                <h3>JavaScript</h3>
+                <p>Adding basic interaction to websites.</p>
+            </div>
+
+            <div class="skill">
+                <h3>Responsive Design</h3>
+                <p>Making websites work on mobile and desktop.</p>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+        <h2>My Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>Personal Portfolio</h3>
+
+                <p>
+                    A simple personal portfolio website created
+                    using HTML and CSS.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+
+            <div class="project">
+                <h3>Responsive Landing Page</h3>
+
+                <p>
+                    A responsive landing page designed for a
+                    business or startup.
+                </p>
+
+                <a href="#" class="project-link">View Project</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- Contact -->
+    <section id="contact" class="section light">
+        <h2>Contact Me</h2>
+
+        <div class="contact-box">
+
+            <form onsubmit="submitForm(event)">
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Your Name"
+                    required
+                >
+
+                <input
+                    type="email"
+                    id="email"
+                    placeholder="Your Email"
+                    required
+                >
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    placeholder="Your Message"
+                    required
+                ></textarea>
+
+                <button type="submit">Send Message</button>
+
+            </form>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Ismail Saeed. All Rights Reserved.</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
